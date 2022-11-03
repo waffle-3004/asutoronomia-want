@@ -6,39 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="217dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="250dp"
-        android:text="Button"
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="407dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="217dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="15dp"
-        android:text="Button"
+        android:id="@+id/button1"
+        android:layout_width="98dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:text="通知"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="217dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="15dp"
-        android:text="Button"
+        android:id="@+id/accountButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="アカウント"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
 
-    <SearchView
-        android:layout_width="407dp"
-        android:layout_height="45dp"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="3dp" />
+    <Button
+        android:id="@+id/postButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="不満投稿"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accountButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostActivity">
+
+    <TextView
+        android:id="@+id/dissatisfactionPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="不満投稿"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="キャンセル"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/dissatisfactionPost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dissatisfactionPost" />
+
+    <TextView
+        android:id="@+id/post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="投稿"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dissatisfactionPost"
+        app:layout_constraintTop_toBottomOf="@+id/dissatisfactionPost" />
+
+    <EditText
+        android:id="@+id/textTitle"
+        android:layout_width="300dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="タイトル"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cancel" />
+
+    <EditText
+        android:id="@+id/textContent"
+        android:layout_width="300dp"
+        android:layout_height="243dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTitle" />
+
+    <TextView
+        android:id="@+id/SexBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="32dp"
+        android:text="性別："
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textContent" />
+
+    <TextView
+        android:id="@+id/sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="男性"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/SexBox"
+        app:layout_constraintTop_toBottomOf="@+id/textContent" />
+
+    <TextView
+        android:id="@+id/AgeBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="24dp"
+        android:text="年齢："
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SexBox" />
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="◯◯歳"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/AgeBox"
+        app:layout_constraintTop_toBottomOf="@+id/sex" />
+
+    <TextView
+        android:id="@+id/ProfessionBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="24dp"
+        android:text="職業："
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AgeBox" />
+
+    <TextView
+        android:id="@+id/profession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="エンジニア"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/ProfessionBox"
+        app:layout_constraintTop_toBottomOf="@+id/age" />
+
+    <Switch
+        android:id="@+id/sexSwitch"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:showText="false"
+        android:switchMinWidth="70dp"
+        android:theme="@style/CustomSwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.762"
+        app:layout_constraintStart_toEndOf="@+id/sex"
+        app:layout_constraintTop_toBottomOf="@+id/textContent" />
+
+    <Switch
+        android:id="@+id/ageSwitch"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="-10dp"
+        android:showText="false"
+        android:switchMinWidth="70dp"
+        android:theme="@style/CustomSwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.569"
+        app:layout_constraintStart_toEndOf="@+id/age"
+        app:layout_constraintTop_toBottomOf="@+id/sexSwitch" />
+
+    <Switch
+        android:id="@+id/professionSwitch"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="-10dp"
+        android:showText="false"
+        android:switchMinWidth="70dp"
+        android:theme="@style/CustomSwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/profession"
+        app:layout_constraintTop_toBottomOf="@+id/ageSwitch" />
+
+    <TextView
+        android:id="@+id/textPointUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="3dp"
+        android:text="公開で査定ポイントアップ"
+        app:layout_constraintEnd_toStartOf="@+id/imagePoint"
+        app:layout_constraintTop_toBottomOf="@+id/professionSwitch" />
+
+    <ImageView
+        android:id="@+id/imagePoint"
+        android:layout_width="25dp"
+        android:layout_height="29dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/professionSwitch"
+        app:srcCompat="@drawable/pointimage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

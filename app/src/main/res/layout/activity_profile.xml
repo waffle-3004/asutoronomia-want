@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <TextView
+        android:id="@+id/Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="プロフィール"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/accountImage"
+        android:layout_width="149dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Profile"
+        app:srcCompat="@drawable/accountimage" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-25dp"
+        android:text="情報太郎"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accountImage" />
+
+    <ImageView
+        android:id="@+id/pencilImage"
+        android:layout_width="35dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-8dp"
+        app:layout_constraintStart_toEndOf="@+id/textName"
+        app:layout_constraintTop_toTopOf="@+id/textName"
+        app:srcCompat="@drawable/pencilimage" />
+
+    <ImageView
+        android:id="@+id/addressBox"
+        android:layout_width="379dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accountImage"
+        app:srcCompat="@drawable/whitebox" />
+
+    <ImageView
+        android:id="@+id/genreBox"
+        android:layout_width="379dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressBox"
+        app:srcCompat="@drawable/whitebox" />
+
+    <ImageView
+        android:id="@+id/emailAddressBox"
+        android:layout_width="379dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genreBox"
+        app:srcCompat="@drawable/whitebox" />
+
+    <TextView
+        android:id="@+id/textSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:text="・公開する設定"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailAddressBox" />
+
+    <TextView
+        android:id="@+id/textSexBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:text="性別："
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSetting" />
+
+    <TextView
+        android:id="@+id/textAgeBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:text="年齢："
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSexBox" />
+
+    <TextView
+        android:id="@+id/textProfessionBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:text="職業："
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAgeBox" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="197dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/textSexBox"
+        app:layout_constraintTop_toBottomOf="@+id/textSetting">
+
+        <RadioButton
+            android:id="@+id/radioButtonMale"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="男性" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFemale"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="女性" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="8dp"
+        android:text="◯◯歳"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textAgeBox"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/textProfession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="14dp"
+        android:text="◯◯◯◯◯◯◯◯"
+        app:layout_constraintStart_toEndOf="@+id/textProfessionBox"
+        app:layout_constraintTop_toBottomOf="@+id/textAge" />
+
+    <ImageView
+        android:id="@+id/changeProfile"
+        android:layout_width="106dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailAddressBox"
+        app:srcCompat="@drawable/changeprofile" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
