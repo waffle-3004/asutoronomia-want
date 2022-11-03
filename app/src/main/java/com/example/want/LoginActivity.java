@@ -18,6 +18,7 @@ public class LoginActivity extends AppCompatActivity {
         Button loginButton = findViewById(R.id.loginButton);
         Button signUpTransitionButton = findViewById(R.id.signUpTransitionButton);
         ImageView loginImage1 = findViewById(R.id.loginImage1);
+        ImageView loginImage2 = findViewById(R.id.loginImage1);
 
 
         loginButton.setOnClickListener(v -> {
