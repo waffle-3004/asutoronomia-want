@@ -7,6 +7,7 @@ import android.media.Image;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -15,23 +16,18 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        Button loginButton = findViewById(R.id.loginButton);
-        Button signUpTransitionButton = findViewById(R.id.signUpTransitionButton);
-        ImageView loginImage1 = findViewById(R.id.loginImage1);
-        ImageView loginImage2 = findViewById(R.id.loginImage1);
+        ImageView loginButtonImage = findViewById(R.id.loginButtonImage);
+        TextView textSignUp = findViewById(R.id.textSignUp);
 
-
-        loginButton.setOnClickListener(v -> {
+        loginButtonImage.setOnClickListener(v -> {
             Intent intent = new Intent(getApplication(), MainActivity.class);
             startActivity(intent);
         });
-        signUpTransitionButton.setOnClickListener(v -> {
+
+        textSignUp.setOnClickListener(v -> {
             Intent intent = new Intent(getApplication(), SignUpActivity.class);
             startActivity(intent);
         });
-        loginImage1.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplication(), MainActivity.class);
-            startActivity(intent);
-        });
+
     }
 }
