@@ -6,6 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".AccountActivity">
 
+    <ImageView
+        android:id="@+id/horizontalLineImage3"
+        android:layout_width="368dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="73dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:srcCompat="@drawable/horizontal_line" />
+
+    <ImageView
+        android:id="@+id/homeImage3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/searchImage3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage3"
+        app:srcCompat="@drawable/home_image" />
+
+    <ImageView
+        android:id="@+id/searchImage3"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintEnd_toStartOf="@+id/postImage3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/homeImage3"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage3"
+        app:srcCompat="@drawable/search_image" />
+
+    <ImageView
+        android:id="@+id/postImage3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/notificationImage3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/searchImage3"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage3"
+        app:srcCompat="@drawable/post_image" />
+
+    <ImageView
+        android:id="@+id/notificationImage3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/mypageImage3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/postImage3"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage3"
+        app:srcCompat="@drawable/notification_image" />
+
+    <ImageView
+        android:id="@+id/mypageImage3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/notificationImage3"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage3"
+        app:srcCompat="@drawable/mypage_image" />
+
     <TextView
         android:id="@+id/account"
         android:layout_width="wrap_content"
@@ -28,7 +93,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:srcCompat="@drawable/whitebox" />
+        app:srcCompat="@drawable/white_box" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -41,7 +106,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/account"
-        app:srcCompat="@drawable/whitebox" />
+        app:srcCompat="@drawable/white_box" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -52,7 +117,7 @@
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:srcCompat="@drawable/whitebox" />
+        app:srcCompat="@drawable/white_box" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -63,7 +128,7 @@
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:srcCompat="@drawable/whitebox" />
+        app:srcCompat="@drawable/white_box" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -74,7 +139,7 @@
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:srcCompat="@drawable/whitebox" />
+        app:srcCompat="@drawable/white_box" />
 
     <TextView
         android:id="@+id/textAccount"

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MemberRegistrationSelectionActivity">
+
+    <ImageView
+        android:id="@+id/horizontalLineImage7"
+        android:layout_width="368dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="-10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/premiumPlanImage"
+        app:srcCompat="@drawable/horizontal_line" />
+
+    <ImageView
+        android:id="@+id/postImage7"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/notificationImage7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/searchImage7"
+        app:layout_constraintTop_toBottomOf="@+id/premiumPlanImage"
+        app:srcCompat="@drawable/post_image" />
+
+    <ImageView
+        android:id="@+id/homeImage7"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/searchImage7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/premiumPlanImage"
+        app:srcCompat="@drawable/home_image" />
+
+    <ImageView
+        android:id="@+id/searchImage7"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toStartOf="@+id/postImage7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/homeImage7"
+        app:layout_constraintTop_toBottomOf="@+id/premiumPlanImage"
+        app:srcCompat="@drawable/search_image" />
+
+    <ImageView
+        android:id="@+id/mypageImage7"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/notificationImage7"
+        app:layout_constraintTop_toBottomOf="@+id/premiumPlanImage"
+        app:srcCompat="@drawable/mypage_image" />
+
+    <ImageView
+        android:id="@+id/notificationImage7"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/mypageImage7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/postImage7"
+        app:layout_constraintTop_toBottomOf="@+id/premiumPlanImage"
+        app:srcCompat="@drawable/notification_image" />
+
+    <ImageView
+        android:id="@+id/lightPlanImage"
+        android:layout_width="283dp"
+        android:layout_height="242dp"
+        android:layout_marginTop="-45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shadowLine"
+        app:srcCompat="@drawable/lightplan_image" />
+
+    <ImageView
+        android:id="@+id/standardPlanImage"
+        android:layout_width="283dp"
+        android:layout_height="242dp"
+        android:layout_marginTop="-60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lightPlanImage"
+        app:srcCompat="@drawable/standardplan_image" />
+
+    <ImageView
+        android:id="@+id/premiumPlanImage"
+        android:layout_width="283dp"
+        android:layout_height="242dp"
+        android:layout_marginTop="-60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/standardPlanImage"
+        app:srcCompat="@drawable/premiumplan_image" />
+
+    <ImageView
+        android:id="@+id/shadowLine"
+        android:layout_width="482dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shadow_image" />
+
+    <TextView
+        android:id="@+id/registerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="プラン購入"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostHistoryActivity">
+
+    <ImageView
+        android:id="@+id/horizontalLineImage9"
+        android:layout_width="368dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="55dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grayBox4"
+        app:srcCompat="@drawable/horizontal_line" />
+
+    <ImageView
+        android:id="@+id/postImage9"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/notificationImage9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/searchImage9"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage9"
+        app:srcCompat="@drawable/post_image" />
+
+    <ImageView
+        android:id="@+id/searchImage9"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/postImage9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/homeImage9"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage9"
+        app:srcCompat="@drawable/search_image" />
+
+    <ImageView
+        android:id="@+id/mypageImage9"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/notificationImage9"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage9"
+        app:srcCompat="@drawable/mypage_image" />
+
+    <ImageView
+        android:id="@+id/notificationImage9"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/mypageImage9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/postImage9"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage9"
+        app:srcCompat="@drawable/notification_image" />
+
+    <ImageView
+        android:id="@+id/homeImage9"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/searchImage9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage9"
+        app:srcCompat="@drawable/home_image" />
+
+    <TextView
+        android:id="@+id/postHistoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="投稿履歴"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/shadowLine2"
+        android:layout_width="632dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shadow_image" />
+
+    <TextView
+        android:id="@+id/postCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="24dp"
+        android:text="投稿回数："
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shadowLine2" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="◯◯◯"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shadowLine2" />
+
+    <TextView
+        android:id="@+id/countText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-80dp"
+        android:layout_marginTop="24dp"
+        android:text="回！！"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/count"
+        app:layout_constraintTop_toBottomOf="@+id/shadowLine2" />
+
+    <TextView
+        android:id="@+id/thanksComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="いつも投稿ありがとう！"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/count" />
+
+    <ImageView
+        android:id="@+id/grayBox1"
+        android:layout_width="338dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thanksComment"
+        app:srcCompat="@drawable/graybox" />
+
+    <ImageView
+        android:id="@+id/grayBox2"
+        android:layout_width="338dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="-10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grayBox1"
+        app:srcCompat="@drawable/graybox" />
+
+    <ImageView
+        android:id="@+id/grayBox3"
+        android:layout_width="338dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="-10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grayBox2"
+        app:srcCompat="@drawable/graybox" />
+
+    <ImageView
+        android:id="@+id/grayBox4"
+        android:layout_width="338dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="-10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grayBox3"
+        app:srcCompat="@drawable/graybox" />
+
+    <TextView
+        android:id="@+id/postContent1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="16dp"
+        android:text="内容：◯◯◯◯◯◯◯◯◯◯"
+        app:layout_constraintBottom_toTopOf="@+id/grayBox2"
+        app:layout_constraintEnd_toEndOf="@+id/grayBox1"
+        app:layout_constraintStart_toStartOf="@+id/grayBox1"
+        app:layout_constraintTop_toTopOf="@+id/grayBox1" />
+
+    <TextView
+        android:id="@+id/postContent2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="16dp"
+        android:text="内容：◯◯◯◯◯◯◯◯◯◯"
+        app:layout_constraintBottom_toTopOf="@+id/grayBox3"
+        app:layout_constraintEnd_toEndOf="@+id/grayBox2"
+        app:layout_constraintStart_toStartOf="@+id/grayBox2"
+        app:layout_constraintTop_toTopOf="@+id/grayBox2" />
+
+    <TextView
+        android:id="@+id/postContent3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="16dp"
+        android:text="内容：◯◯◯◯◯◯◯◯◯◯"
+        app:layout_constraintBottom_toTopOf="@+id/grayBox4"
+        app:layout_constraintEnd_toEndOf="@+id/grayBox3"
+        app:layout_constraintStart_toStartOf="@+id/grayBox3"
+        app:layout_constraintTop_toTopOf="@+id/grayBox3" />
+
+    <TextView
+        android:id="@+id/postContent4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="32dp"
+        android:text="内容：◯◯◯◯◯◯◯◯◯◯"
+        app:layout_constraintBottom_toBottomOf="@+id/grayBox4"
+        app:layout_constraintEnd_toEndOf="@+id/grayBox4"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/grayBox4"
+        app:layout_constraintTop_toTopOf="@+id/grayBox4" />
+
+    <TextView
+        android:id="@+id/assessment1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="200dp"
+        android:text="評価："
+        app:layout_constraintEnd_toEndOf="@+id/grayBox1"
+        app:layout_constraintStart_toStartOf="@+id/grayBox1"
+        app:layout_constraintTop_toBottomOf="@+id/postContent1" />
+
+    <TextView
+        android:id="@+id/assessment2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="200dp"
+        android:text="評価："
+        app:layout_constraintEnd_toEndOf="@+id/grayBox2"
+        app:layout_constraintStart_toStartOf="@+id/grayBox2"
+        app:layout_constraintTop_toBottomOf="@+id/postContent2" />
+
+    <TextView
+        android:id="@+id/assessment3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="200dp"
+        android:text="評価："
+        app:layout_constraintEnd_toEndOf="@+id/grayBox3"
+        app:layout_constraintStart_toStartOf="@+id/grayBox3"
+        app:layout_constraintTop_toBottomOf="@+id/postContent3" />
+
+    <TextView
+        android:id="@+id/assessment4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="200dp"
+        android:text="評価："
+        app:layout_constraintEnd_toEndOf="@+id/grayBox4"
+        app:layout_constraintStart_toStartOf="@+id/grayBox4"
+        app:layout_constraintTop_toBottomOf="@+id/postContent4" />
+
+    <TextView
+        android:id="@+id/emoji1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:text="😄"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/assessment1"
+        app:layout_constraintTop_toBottomOf="@+id/postContent1" />
+
+    <TextView
+        android:id="@+id/emoji2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:text="😄"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/assessment2"
+        app:layout_constraintTop_toBottomOf="@+id/postContent2" />
+
+    <TextView
+        android:id="@+id/emoji3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:text="😄"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/assessment3"
+        app:layout_constraintTop_toBottomOf="@+id/postContent3" />
+
+    <TextView
+        android:id="@+id/emoji4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:text="😄"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/assessment4"
+        app:layout_constraintTop_toBottomOf="@+id/postContent4" />
+
+    <TextView
+        android:id="@+id/assessmentScore1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="◯.◯"
+        app:layout_constraintStart_toEndOf="@+id/emoji1"
+        app:layout_constraintTop_toBottomOf="@+id/postContent1" />
+
+    <TextView
+        android:id="@+id/assessmentScore2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="◯.◯"
+        app:layout_constraintStart_toEndOf="@+id/emoji2"
+        app:layout_constraintTop_toBottomOf="@+id/postContent2" />
+
+    <TextView
+        android:id="@+id/assessmentScore3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="◯.◯"
+        app:layout_constraintStart_toEndOf="@+id/emoji3"
+        app:layout_constraintTop_toBottomOf="@+id/postContent3" />
+
+    <TextView
+        android:id="@+id/assessmentScore4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="◯.◯"
+        app:layout_constraintStart_toEndOf="@+id/emoji4"
+        app:layout_constraintTop_toBottomOf="@+id/postContent4" />
+
+    <ImageView
+        android:id="@+id/goodImage1"
+        android:layout_width="31dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/assessmentScore1"
+        app:layout_constraintTop_toBottomOf="@+id/postContent1"
+        app:srcCompat="@drawable/good_image" />
+
+    <ImageView
+        android:id="@+id/goodImage2"
+        android:layout_width="31dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/assessmentScore3"
+        app:layout_constraintTop_toBottomOf="@+id/postContent3"
+        app:srcCompat="@drawable/good_image" />
+
+    <ImageView
+        android:id="@+id/goodImage3"
+        android:layout_width="31dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/assessmentScore4"
+        app:layout_constraintTop_toBottomOf="@+id/postContent4"
+        app:srcCompat="@drawable/good_image" />
+
+    <ImageView
+        android:id="@+id/goodImage4"
+        android:layout_width="31dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/assessmentScore2"
+        app:layout_constraintTop_toBottomOf="@+id/postContent2"
+        app:srcCompat="@drawable/good_image" />
+
+    <TextView
+        android:id="@+id/goodCount1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="◯◯"
+        app:layout_constraintStart_toEndOf="@+id/goodImage1"
+        app:layout_constraintTop_toBottomOf="@+id/postContent1" />
+
+    <TextView
+        android:id="@+id/goodCount2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="◯◯"
+        app:layout_constraintStart_toEndOf="@+id/goodImage4"
+        app:layout_constraintTop_toBottomOf="@+id/postContent2" />
+
+    <TextView
+        android:id="@+id/goodCount3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="◯◯"
+        app:layout_constraintStart_toEndOf="@+id/goodImage2"
+        app:layout_constraintTop_toBottomOf="@+id/postContent3" />
+
+    <TextView
+        android:id="@+id/goodCount4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:text="◯◯"
+        app:layout_constraintStart_toEndOf="@+id/goodImage3"
+        app:layout_constraintTop_toBottomOf="@+id/postContent4" />
+
+    <ImageView
+        android:id="@+id/repost1"
+        android:layout_width="77dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/grayBox1"
+        app:layout_constraintTop_toBottomOf="@+id/postContent1"
+        app:srcCompat="@drawable/repost_image" />
+
+    <ImageView
+        android:id="@+id/repost2"
+        android:layout_width="77dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/grayBox2"
+        app:layout_constraintTop_toBottomOf="@+id/postContent2"
+        app:srcCompat="@drawable/repost_image" />
+
+    <ImageView
+        android:id="@+id/repost3"
+        android:layout_width="77dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/grayBox3"
+        app:layout_constraintTop_toBottomOf="@+id/postContent3"
+        app:srcCompat="@drawable/repost_image" />
+
+    <ImageView
+        android:id="@+id/repost4"
+        android:layout_width="77dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/grayBox4"
+        app:layout_constraintTop_toBottomOf="@+id/postContent4"
+        app:srcCompat="@drawable/repost_image" />
+
+    <TextView
+        android:id="@+id/timeAgo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="40dp"
+        android:text="◯時間前"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thanksComment" />
+
+    <TextView
+        android:id="@+id/timeAgo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
+        android:text="◯時間前"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/grayBox3" />
+
+    <TextView
+        android:id="@+id/timeAgo3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
+        android:text="◯時間前"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/grayBox4" />
+
+    <TextView
+        android:id="@+id/timeAgo4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="40dp"
+        android:text="◯時間前"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/grayBox2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

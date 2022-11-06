@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:layout_width="183dp"
+        android:layout_height="211dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login_image2" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="310dp"
+        android:layout_height="430dp"
+        android:layout_marginTop="-25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login_image1" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="77dp"
+        android:layout_height="431dp"
+        android:layout_marginStart="-14dp"
+        android:layout_marginBottom="-18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/login_image3" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView16"
+        app:srcCompat="@drawable/login_image4" />
+
+    <ImageView
+        android:id="@+id/wantIconImage"
+        android:layout_width="100dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="115dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/want_icon" />
+
+    <ImageView
+        android:id="@+id/wantText"
+        android:layout_width="126dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wantIconImage"
+        app:srcCompat="@drawable/want" />
+
+    <TextView
+        android:id="@+id/planSelectionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="ご利用可能なプラン"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wantText" />
+
+    <ImageView
+        android:id="@+id/basicPlanImage"
+        android:layout_width="343dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wantText"
+        app:srcCompat="@drawable/basicplan_image" />
+
+    <ImageView
+        android:id="@+id/oneDayPlanImage"
+        android:layout_width="343dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="-42dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView20"
+        app:srcCompat="@drawable/onedayplan_image" />
+
+    <ImageView
+        android:id="@+id/memberRegistrationImage2"
+        android:layout_width="158dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="-24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/oneDayPlanImage"
+        app:srcCompat="@drawable/member_registration_image" />
+
+    <TextView
+        android:id="@+id/cancelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="キャンセル"
+        android:textColor="#2196F3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memberRegistrationImage2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostInformationActivity">
+
+    <ImageView
+        android:id="@+id/horizontalLineImage10"
+        android:layout_width="368dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postList"
+        app:srcCompat="@drawable/horizontal_line" />
+
+    <ImageView
+        android:id="@+id/postImage11"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintEnd_toStartOf="@+id/notificationImage11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/searchImage11"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage10"
+        app:srcCompat="@drawable/post_image" />
+
+    <ImageView
+        android:id="@+id/searchImage11"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintEnd_toStartOf="@+id/postImage11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/homeImage11"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage10"
+        app:srcCompat="@drawable/search_image" />
+
+    <ImageView
+        android:id="@+id/mypageImage11"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/notificationImage11"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage10"
+        app:srcCompat="@drawable/mypage_image" />
+
+    <ImageView
+        android:id="@+id/notificationImage11"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintEnd_toStartOf="@+id/mypageImage11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/postImage11"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage10"
+        app:srcCompat="@drawable/notification_image" />
+
+    <ImageView
+        android:id="@+id/homeImage11"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintEnd_toStartOf="@+id/searchImage11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage10"
+        app:srcCompat="@drawable/home_image" />
+
+    <ListView
+        android:id="@+id/postList"
+        android:layout_width="413dp"
+        android:layout_height="533dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shadowLine3">
+
+    </ListView>
+
+    <ImageView
+        android:id="@+id/shadowLine3"
+        android:layout_width="481dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shadow_image" />
+
+    <TextView
+        android:id="@+id/popularText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="55dp"
+        android:text="人気"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/followText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="60dp"
+        android:text="フォロー"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

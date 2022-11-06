@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CashActivity">
+
+    <ImageView
+        android:id="@+id/horizontalLineImage8"
+        android:layout_width="368dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/money"
+        app:srcCompat="@drawable/horizontal_line" />
+
+    <ImageView
+        android:id="@+id/postImage8"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintEnd_toStartOf="@+id/notificationImage8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/searchImage8"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage8"
+        app:srcCompat="@drawable/post_image" />
+
+    <ImageView
+        android:id="@+id/homeImage8"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintEnd_toStartOf="@+id/searchImage8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage8"
+        app:srcCompat="@drawable/home_image" />
+
+    <ImageView
+        android:id="@+id/searchImage8"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="11dp"
+        app:layout_constraintEnd_toStartOf="@+id/postImage8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/homeImage8"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage8"
+        app:srcCompat="@drawable/search_image" />
+
+    <ImageView
+        android:id="@+id/mypageImage8"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/notificationImage8"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage8"
+        app:srcCompat="@drawable/mypage_image" />
+
+    <ImageView
+        android:id="@+id/notificationImage8"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="9dp"
+        app:layout_constraintEnd_toStartOf="@+id/mypageImage8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/postImage8"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage8"
+        app:srcCompat="@drawable/notification_image" />
+
+    <ImageView
+        android:id="@+id/shadowimage"
+        android:layout_width="560dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shadow_image" />
+
+    <TextView
+        android:id="@+id/cashText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="換金する"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/want"
+        android:layout_width="108dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shadowimage"
+        app:srcCompat="@drawable/want" />
+
+    <ImageView
+        android:id="@+id/wantPoint"
+        android:layout_width="264dp"
+        android:layout_height="411dp"
+        android:layout_marginTop="-18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shadowimage"
+        app:srcCompat="@drawable/want_point" />
+
+    <ImageView
+        android:id="@+id/amazongift"
+        android:layout_width="338dp"
+        android:layout_height="132dp"
+        android:layout_marginTop="-90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wantPoint"
+        app:srcCompat="@drawable/amazongift" />
+
+    <ImageView
+        android:id="@+id/money"
+        android:layout_width="338dp"
+        android:layout_height="132dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wantPoint"
+        app:srcCompat="@drawable/money" />
+
+    <ImageView
+        android:id="@+id/exchangeAmazongift"
+        android:layout_width="78dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="-50dp"
+        android:layout_marginTop="-35dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/wantPoint"
+        app:layout_constraintTop_toBottomOf="@+id/wantPoint"
+        app:srcCompat="@drawable/exchange" />
+
+    <ImageView
+        android:id="@+id/exchangeMoney"
+        android:layout_width="78dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="-50dp"
+        android:layout_marginTop="-80dp"
+        android:layout_marginEnd="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/wantPoint"
+        app:layout_constraintTop_toBottomOf="@+id/money"
+        app:srcCompat="@drawable/exchange" />
+</androidx.constraintlayout.widget.ConstraintLayout>

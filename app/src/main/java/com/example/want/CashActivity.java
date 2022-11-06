@@ -6,20 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-public class AccountActivity extends AppCompatActivity {
+public class CashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_account);
+        setContentView(R.layout.activity_cash);
 
-        ImageView imageView6 = findViewById(R.id.imageView6);
-
-        ImageView homeImage = findViewById(R.id.homeImage3);
-        ImageView searchImage = findViewById(R.id.searchImage3);
-        ImageView postImage = findViewById(R.id.postImage3);
-        ImageView notificationImage = findViewById(R.id.notificationImage3);
-        ImageView mypageImage = findViewById(R.id.mypageImage3);
+        ImageView homeImage = findViewById(R.id.homeImage8);
+        ImageView searchImage = findViewById(R.id.searchImage8);
+        ImageView postImage = findViewById(R.id.postImage8);
+        ImageView notificationImage = findViewById(R.id.notificationImage8);
+        ImageView mypageImage = findViewById(R.id.mypageImage8);
 
 
         homeImage.setOnClickListener(v -> {
@@ -42,9 +40,5 @@ public class AccountActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        imageView6.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplication(), NotificationActivity.class);
-            startActivity(intent);
-        });
     }
 }

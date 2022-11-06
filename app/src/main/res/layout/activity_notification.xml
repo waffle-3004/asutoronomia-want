@@ -35,13 +35,75 @@
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+    <ImageView
+        android:id="@+id/horizontalLineImage2"
+        android:layout_width="368dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postList"
+        app:srcCompat="@drawable/horizontal_line" />
+
+    <ImageView
+        android:id="@+id/mypageImage2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage2"
+        app:srcCompat="@drawable/mypage_image" />
+
+    <ImageView
+        android:id="@+id/postImage2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/searchImage2"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage2"
+        app:srcCompat="@drawable/post_image" />
+
+    <ImageView
+        android:id="@+id/notificationImage2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mypageImage2"
+        app:layout_constraintStart_toEndOf="@+id/postImage2"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage2"
+        app:srcCompat="@drawable/notification_image" />
+
+    <ImageView
+        android:id="@+id/homeImage2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage2"
+        app:srcCompat="@drawable/home_image" />
+
+    <ImageView
+        android:id="@+id/searchImage2"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/homeImage2"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalLineImage2"
+        app:srcCompat="@drawable/search_image" />
+
     <ListView
-        android:id="@+id/NotificationList"
+        android:id="@+id/postList"
         android:layout_width="413dp"
         android:layout_height="533dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" >
+
+    </ListView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
