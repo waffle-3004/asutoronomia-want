@@ -18,7 +18,12 @@ public class PrivateActivity extends AppCompatActivity {
         ImageView postImage = findViewById(R.id.postImage10);
         ImageView notificationImage = findViewById(R.id.notificationImage10);
         ImageView mypageImage = findViewById(R.id.mypageImage10);
+        ImageView memberRegistrationImage = findViewById(R.id.memberRegistrationImage);
 
+        memberRegistrationImage.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplication(), MemberRegistrationSelectionActivity.class);
+            startActivity(intent);
+        });
 
         homeImage.setOnClickListener(v -> {
             Intent intent = new Intent(getApplication(), MainActivity.class);

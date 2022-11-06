@@ -18,7 +18,18 @@ public class PointActivity extends AppCompatActivity {
         ImageView postImage = findViewById(R.id.postImage4);
         ImageView notificationImage = findViewById(R.id.notificationImage4);
         ImageView mypageImage = findViewById(R.id.mypageImage4);
+        ImageView postHistory = findViewById(R.id.postHistory);
+        ImageView cash = findViewById(R.id.cash);
 
+        postHistory.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplication(), PostHistoryActivity.class);
+            startActivity(intent);
+        });
+
+        cash.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplication(), CashActivity.class);
+            startActivity(intent);
+        });
 
         homeImage.setOnClickListener(v -> {
             Intent intent = new Intent(getApplication(), MainActivity.class);

@@ -20,7 +20,24 @@ public class AccountActivity extends AppCompatActivity {
         ImageView postImage = findViewById(R.id.postImage3);
         ImageView notificationImage = findViewById(R.id.notificationImage3);
         ImageView mypageImage = findViewById(R.id.mypageImage3);
+        ImageView logoutImage = findViewById(R.id.logoutImage);
+        ImageView accountChange = findViewById(R.id.accountChange);
+        ImageView accountSetting = findViewById(R.id.accountSetting);
 
+        accountSetting.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplication(), ProfileActivity.class);
+            startActivity(intent);
+        });
+
+        logoutImage.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplication(), LoginActivity.class);
+            startActivity(intent);
+        });
+
+        accountChange.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplication(), LoginActivity.class);
+            startActivity(intent);
+        });
 
         homeImage.setOnClickListener(v -> {
             Intent intent = new Intent(getApplication(), MainActivity.class);

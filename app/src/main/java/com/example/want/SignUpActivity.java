@@ -23,7 +23,7 @@ public class SignUpActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        registerButtonImage.setOnClickListener(v -> {
+        textLogin.setOnClickListener(v -> {
             Intent intent = new Intent(getApplication(), LoginActivity.class);
             startActivity(intent);
         });

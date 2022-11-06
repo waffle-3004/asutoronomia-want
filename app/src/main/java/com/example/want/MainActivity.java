@@ -1,6 +1,7 @@
 package com.example.want;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.ImageViewCompat;
 
 import android.content.Intent;
 import android.media.Image;
@@ -35,6 +36,44 @@ public class MainActivity extends AppCompatActivity {
         ImageView postImage = findViewById(R.id.postImage);
         ImageView notificationImage = findViewById(R.id.notificationImage);
         ImageView mypageImage = findViewById(R.id.mypageImage);
+        ImageView postHistory = findViewById(R.id.view1);
+        ImageView postInformation = findViewById(R.id.view2);
+        ImageView questionPost = findViewById(R.id.view3);
+        ImageView question = findViewById(R.id.view4);
+        ImageView privatePage = findViewById(R.id.view5);
+        ImageView register = findViewById(R.id.view6);
+
+        register.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplication(), RegisterActivity.class);
+            startActivity(intent);
+        });
+
+        privatePage.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplication(), PrivateActivity.class);
+            startActivity(intent);
+        });
+
+        question.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplication(), QuestionActivity.class);
+            startActivity(intent);
+        });
+
+        questionPost.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplication(), QuestionPostActivity.class);
+            startActivity(intent);
+        });
+
+
+        postInformation.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplication(), PostInformationActivity.class);
+            startActivity(intent);
+        });
+
+
+        postHistory.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplication(), PostHistoryActivity.class);
+            startActivity(intent);
+        });
 
         postImage.setOnClickListener(v -> {
             Intent intent = new Intent(getApplication(), PostActivity.class);
