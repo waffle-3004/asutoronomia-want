@@ -27,6 +27,7 @@ public class SignUpActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplication(), LoginActivity.class);
             startActivity(intent);
         });
+        System.out.println("ああああああああ");
 
 
     }
