@@ -27,6 +27,7 @@ public class ShioshioActivity extends AppCompatActivity {
             startActivity(intent);
         });
         System.out.println("shioshio");
+        System.out.println("suzuki");
 
     }
 }
