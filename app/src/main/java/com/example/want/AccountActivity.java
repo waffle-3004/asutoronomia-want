@@ -3,7 +3,9 @@ package com.example.want;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 
 public class AccountActivity extends AppCompatActivity {
@@ -24,13 +26,23 @@ public class AccountActivity extends AppCompatActivity {
         ImageView accountChange = findViewById(R.id.accountChange);
         ImageView accountSetting = findViewById(R.id.accountSetting);
 
-        accountSetting.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplication(), ProfileActivity.class);
-            startActivity(intent);
+        logoutImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                SharedPreferences preferences = getSharedPreferences("checkBox", MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString("remember", "false");
+                editor.apply();
+
+                Intent intent = new Intent(getApplication(), LoginActivity.class);
+                startActivity(intent);
+
+            }
         });
 
-        logoutImage.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplication(), LoginActivity.class);
+        accountSetting.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplication(), ProfileActivity.class);
             startActivity(intent);
         });
 

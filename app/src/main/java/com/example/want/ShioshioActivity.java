@@ -28,6 +28,5 @@ public class ShioshioActivity extends AppCompatActivity {
         });
         System.out.println("shioshio");
 
-
     }
 }

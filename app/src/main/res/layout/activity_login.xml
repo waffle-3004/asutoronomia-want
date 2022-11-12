@@ -23,7 +23,7 @@
         android:layout_marginTop="32dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="ユーザーネーム"
+        android:hint="ユーザーID"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wantImage" />
@@ -35,6 +35,7 @@
         android:layout_marginTop="32dp"
         android:ems="10"
         android:inputType="textPassword"
+        android:hint="パスワード"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textUserName" />
@@ -80,17 +81,18 @@
         android:id="@+id/loginButtonImage"
         android:layout_width="173dp"
         android:layout_height="51dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="2dp"
+        android:onClick="login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/loginImage1"
         app:srcCompat="@drawable/login_button_image" />
 
     <TextView
         android:id="@+id/textForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="50dp"
         android:text="パスワードを忘れた場合"
         android:textColor="#2196F3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,5 +109,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textForgotPassword" />
+
+    <CheckBox
+        android:id="@+id/rememberMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="ログイン情報を保存する"
+        app:layout_constraintBottom_toTopOf="@+id/loginImage4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
