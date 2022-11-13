@@ -28,5 +28,6 @@ public class ShioshioActivity extends AppCompatActivity {
         });
         System.out.println("shioshio");
         System.out.println("suzuharu");
+        System.out.println("tensai");
     }
 }
