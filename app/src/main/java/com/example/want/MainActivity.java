@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         postHistory.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplication(), PostHistoryActivity.class);
+            Intent intent = new Intent(getApplication(), DBCreateActivity.class);
             startActivity(intent);
         });
 

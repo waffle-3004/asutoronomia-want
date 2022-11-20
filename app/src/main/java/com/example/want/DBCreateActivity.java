@@ -1,4 +1,6 @@
 package com.example.want;
+//package your.package.name;
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -9,18 +11,18 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class DBpractice extends AppCompatActivity {
+public class DBCreateActivity extends AppCompatActivity {
 
     private TextView textView;
     private EditText editTextKey, editTextValue;
-    private MyOpenHelper helper;
+    private TestOpenHelper helper;
     private SQLiteDatabase db;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dbpractice);
+        setContentView(R.layout.activity_dbcreate);
 
         editTextKey = findViewById(R.id.edit_text_key);
         editTextValue = findViewById(R.id.edit_text_value);
@@ -31,7 +33,7 @@ public class DBpractice extends AppCompatActivity {
         insertButton.setOnClickListener(v -> {
 
             if(helper == null){
-                helper = new MyOpenHelper(getApplicationContext());
+                helper = new TestOpenHelper(getApplicationContext());
             }
 
             if(db == null){
@@ -52,7 +54,7 @@ public class DBpractice extends AppCompatActivity {
 
     private void readData(){
         if(helper == null){
-            helper = new MyOpenHelper(getApplicationContext());
+            helper = new TestOpenHelper(getApplicationContext());
         }
 
         if(db == null){

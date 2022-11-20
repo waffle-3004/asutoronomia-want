@@ -24,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText email,password;
     CheckBox remember;
     ImageView login;
+    TextView textSignUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +35,15 @@ public class LoginActivity extends AppCompatActivity {
         password = findViewById(R.id.textPassword);
         remember = findViewById(R.id.rememberMe);
         login = findViewById(R.id.loginButtonImage);
+        textSignUp = findViewById(R.id.textSignUp);
 
         login.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplication(), DBpractice.class);
+            Intent intent = new Intent(getApplication(), MainActivity.class);
+            startActivity(intent);
+        });
+
+        textSignUp.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplication(), SignUpActivity.class);
             startActivity(intent);
         });
 

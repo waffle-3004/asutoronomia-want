@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Want</string>
+    <string name="app_name">Your App Name</string>
     <string name="hint_key">company</string>
     <string name="hint_value">US$price</string>
     <string name="insert">insert</string>

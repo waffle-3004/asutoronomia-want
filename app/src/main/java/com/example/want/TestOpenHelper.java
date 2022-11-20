@@ -5,7 +5,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-public class MyOpenHelper extends SQLiteOpenHelper {
+public class TestOpenHelper extends SQLiteOpenHelper {
+
     // データーベースのバージョン
     private static final int DATABASE_VERSION = 1;
 
@@ -26,7 +27,7 @@ public class MyOpenHelper extends SQLiteOpenHelper {
             "DROP TABLE IF EXISTS " + TABLE_NAME;
 
 
-    MyOpenHelper(Context context) {
+    TestOpenHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
 
     }
