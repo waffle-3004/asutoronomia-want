@@ -1,18 +1,12 @@
 package com.example.want;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.widget.ImageViewCompat;
-
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView register = findViewById(R.id.view6);
 
         register.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplication(), RegisterActivity.class);
+            Intent intent = new Intent(getApplication(), PostInfoActivity.class);
             startActivity(intent);
         });
 

@@ -13,5 +13,7 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
-    <string name="title_activity_login2">LoginActivity2</string>
+    <string name="reg">登録</string>
+    <string name="del">削除</string>
+    <string name="cancel">キャンセル</string>
 </resources>

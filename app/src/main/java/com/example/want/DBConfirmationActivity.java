@@ -1,21 +1,18 @@
 package com.example.want;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.ListView;
 
-import java.io.FileNotFoundException;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class DBConfirmationActivity extends AppCompatActivity {
 
-    TextView DBtextview;
+    ListView userInfo;
     Button btnDelete;
     private TestOpenHelper helper;
     private SQLiteDatabase db;
@@ -25,7 +22,7 @@ public class DBConfirmationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dbconfirmation);
 
-        DBtextview = findViewById(R.id.DBtextview);
+        userInfo = findViewById(R.id.userInfo);
         btnDelete = findViewById(R.id.btnDelete);
 
         btnDelete.setOnClickListener(v -> {
@@ -74,7 +71,7 @@ public class DBConfirmationActivity extends AppCompatActivity {
         cursor.close();
 
         Log.d("debug","**********"+sbuilder);
-        DBtextview.setText(sbuilder.toString());
+//        userInfo.setText(sbuilder.toString());
     }
 
 }
