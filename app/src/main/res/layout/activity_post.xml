@@ -84,38 +84,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="キャンセル"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/dissatisfactionPost"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dissatisfactionPost" />
-
-    <TextView
-        android:id="@+id/post"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="post"
-        android:text="投稿"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/dissatisfactionPost"
-        app:layout_constraintTop_toBottomOf="@+id/dissatisfactionPost" />
-
     <EditText
         android:id="@+id/textTitle"
         android:layout_width="300dp"
         android:layout_height="51dp"
         android:layout_marginTop="40dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="タイトル"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cancel" />
+        app:layout_constraintTop_toBottomOf="@+id/post" />
 
     <EditText
         android:id="@+id/textContent"
@@ -258,5 +237,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/professionSwitch"
         app:srcCompat="@drawable/point_image" />
+
+    <ImageView
+        android:id="@+id/cancel"
+        android:layout_width="93dp"
+        android:layout_height="17dp"
+        android:onClick="cancel"
+        app:layout_constraintEnd_toStartOf="@+id/dissatisfactionPost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dissatisfactionPost"
+        app:srcCompat="@drawable/cancel_image" />
+
+    <ImageView
+        android:id="@+id/post"
+        android:layout_width="93dp"
+        android:layout_height="23dp"
+        android:onClick="post"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dissatisfactionPost"
+        app:layout_constraintTop_toBottomOf="@+id/dissatisfactionPost"
+        app:srcCompat="@drawable/post_botton_image" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

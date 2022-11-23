@@ -17,10 +17,18 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        adapter.add("A型");
-        adapter.add("B型");
-        adapter.add("AB型");
-        adapter.add("O型");
+        adapter.add("アウトドア");
+        adapter.add("映画鑑賞");
+        adapter.add("YouTube");
+        adapter.add("Instagram");
+        adapter.add("Twitter");
+        adapter.add("TikTok");
+        adapter.add("野球");
+        adapter.add("サッカー");
+        adapter.add("バスケ");
+        adapter.add("料理");
+        adapter.add("音楽");
+        adapter.add("ゲーム");
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         spinner.setAdapter(adapter);
 
@@ -62,12 +70,6 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(getApplication(), PostInformationActivity.class);
             startActivity(intent);
         });
-
-
-//        postHistory.setOnClickListener(v -> {
-//            Intent intent = new Intent(getApplication(), DBCreateActivity.class);
-//            startActivity(intent);
-//        });
 
         postImage.setOnClickListener(v -> {
             Intent intent = new Intent(getApplication(), PostActivity.class);
