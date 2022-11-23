@@ -15,7 +15,7 @@ public class PostDatabaseHelper extends SQLiteOpenHelper {
     static final private int VERSION = 2;
 
     // データベース名
-    static final private String DBNAME = "PostInfo.db";
+    static final private String DBNAME = "samp.db";
 
     // コンストラクタは必ず必要
     public PostDatabaseHelper(Context context) {

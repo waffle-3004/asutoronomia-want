@@ -1,5 +1,4 @@
 package com.example.want;
-
 import android.content.Context;
 import android.database.Cursor;
 import android.view.View;
@@ -7,10 +6,10 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.SimpleCursorAdapter;
 
-public class PostListAdapter extends SimpleCursorAdapter {
+public class MainListAdapter extends SimpleCursorAdapter {
 
     // コンストラクタ
-    public PostListAdapter(Context context, int layout, Cursor c, String[] from, int[] to, int flags) {
+    public MainListAdapter(Context context, int layout, Cursor c, String[] from, int[] to, int flags) {
         super(context, layout, c, from, to, flags);
     }
 

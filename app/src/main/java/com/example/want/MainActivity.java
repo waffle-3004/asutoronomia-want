@@ -64,10 +64,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        postHistory.setOnClickListener(v -> {
-            Intent intent = new Intent(getApplication(), DBCreateActivity.class);
-            startActivity(intent);
-        });
+//        postHistory.setOnClickListener(v -> {
+//            Intent intent = new Intent(getApplication(), DBCreateActivity.class);
+//            startActivity(intent);
+//        });
 
         postImage.setOnClickListener(v -> {
             Intent intent = new Intent(getApplication(), PostActivity.class);

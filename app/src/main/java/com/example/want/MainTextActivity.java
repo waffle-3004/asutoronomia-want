@@ -12,7 +12,7 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class PostInfoActivity extends AppCompatActivity {
+public class MainTextActivity extends AppCompatActivity {
 
     MainListAdapter sc_adapter;
     private PostDatabaseHelper helper = null;
@@ -21,7 +21,21 @@ public class PostInfoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_post_info);
+        setContentView(R.layout.activity_main_text);
+
+    }
+
+    // アクティビティの再開処理
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // データを一覧表示
+        onShow();
+    }
+
+    // データを一覧表示
+    protected void onShow() {
 
         // データベースヘルパーを準備
         helper = new PostDatabaseHelper(this);
@@ -47,7 +61,7 @@ public class PostInfoActivity extends AppCompatActivity {
                     this, R.layout.row_main, cursor, from, to,0);
 
             // activity_main.xmlに定義したListViewオブジェクトを取得
-            ListView list = findViewById(R.id.postList);
+            ListView list = findViewById(R.id.mainList);
 
             // ListViewにアダプターを設定
             list.setAdapter(sc_adapter);
@@ -60,7 +74,7 @@ public class PostInfoActivity extends AppCompatActivity {
                     Cursor cursor = (Cursor)av.getItemAtPosition(position);
 
                     // テキスト登録画面 Activity へのインテントを作成
-                    Intent intent  = new Intent(PostInfoActivity.this, PostActivity.class);
+                    Intent intent  = new Intent(MainTextActivity.this, com.example.want.TextActivity.class);
 
                     intent.putExtra(DBEntry._ID, cursor.getInt(0));
                     intent.putExtra(DBEntry.COLUMN_NAME_TITLE, cursor.getString(1));
@@ -71,61 +85,7 @@ public class PostInfoActivity extends AppCompatActivity {
                 }
             });
         }
-
     }
-
-    // データを一覧表示
-//    protected void onShow() {
-//
-//        // データベースヘルパーを準備
-//        helper = new PostDatabaseHelper(this);
-//
-//        // データベースを検索する項目を定義
-//        String[] cols = {DBEntry._ID, DBEntry.COLUMN_NAME_TITLE, DBEntry.COLUMN_NAME_CONTENTS };
-//
-//        // 読み込みモードでデータベースをオープン
-//        try (SQLiteDatabase db = helper.getReadableDatabase()){
-//
-//            // データベースを検索
-//            Cursor cursor = db.query(DBEntry.TABLE_NAME, cols, null,
-//                    null, null, null, null, null);
-//
-//            // 検索結果から取得する項目を定義
-//            String[] from = {DBEntry.COLUMN_NAME_TITLE};
-//
-//            // データを設定するレイアウトのフィールドを定義
-//            int[] to = {R.id.title};
-//
-//            // ListViewの1行分のレイアウト(row_main.xml)と検索結果を関連付け
-//            sc_adapter = new PostListAdapter(
-//                    this, R.layout.row_main, cursor, from, to,0);
-//
-//            // activity_main.xmlに定義したListViewオブジェクトを取得
-//            ListView list = findViewById(R.id.postList);
-//
-//            // ListViewにアダプターを設定
-//            list.setAdapter(sc_adapter);
-//
-//            // リストの項目をクリックしたときの処理
-//            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//                public void onItemClick(AdapterView av, View view, int position, long id) {
-//
-//                    //　クリックされた行のデータを取得
-//                    Cursor cursor = (Cursor)av.getItemAtPosition(position);
-//
-//                    // テキスト登録画面 Activity へのインテントを作成
-//                    Intent intent  = new Intent(PostInfoActivity.this, PostActivity.class);
-//
-//                    intent.putExtra(DBEntry._ID, cursor.getInt(0));
-//                    intent.putExtra(DBEntry.COLUMN_NAME_TITLE, cursor.getString(1));
-//                    intent.putExtra(DBEntry.COLUMN_NAME_CONTENTS, cursor.getString(2));
-//
-//                    // アクティビティを起動
-//                    startActivity(intent);
-//                }
-//            });
-//        }
-//    }
 
     // 削除ボタン　タップ時に呼び出されるメソッド
     public void btnDel_onClick(View view){
@@ -140,13 +100,16 @@ public class PostInfoActivity extends AppCompatActivity {
         try (SQLiteDatabase db = helper.getWritableDatabase()) {
             db.delete(DBEntry.TABLE_NAME, DBEntry._ID+" = ?", new String[] {String.valueOf(id)});
         }
+
+        // データを一覧表示
+        onShow();
     }
 
     // 「+」フローティング操作ボタン　タップ時に呼び出されるメソッド
     public void fab_reg_onClick(View view) {
 
         // テキスト登録画面 Activity へのインテントを作成
-        Intent intent  = new Intent(PostInfoActivity.this, PostActivity.class);
+        Intent intent  = new Intent(MainTextActivity.this, com.example.want.TextActivity.class);
 
         // アクティビティを起動
         startActivity(intent);

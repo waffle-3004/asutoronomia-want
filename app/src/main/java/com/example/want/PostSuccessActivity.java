@@ -1,47 +1,40 @@
 package com.example.want;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class DBConfirmationActivity extends AppCompatActivity {
+public class PostSuccessActivity extends AppCompatActivity {
 
-    TextView userInfoText;
-    ListView userInfo;
-    Button btnDelete;
-    private TestOpenHelper helper;
+
+    ListView postInfo;
+    private PostDatabaseHelper helper;
     private SQLiteDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dbconfirmation);
+        setContentView(R.layout.activity_post_success);
 
+        postInfo = findViewById(R.id.postInfo);
 
-        userInfoText = findViewById(R.id.userInfoText);
-        userInfo = findViewById(R.id.userInfo);
-        btnDelete = findViewById(R.id.btnDelete);
-
-        btnDelete.setOnClickListener(v -> {
-            db.delete("testdb", null, null);
-
-            Intent intent = new Intent(getApplication(), DBConfirmationActivity.class);
-            startActivity(intent);
-        });
+//        btnDelete.setOnClickListener(v -> {
+//            db.delete("testdb", null, null);
+//
+//            Intent intent = new Intent(getApplication(), DBConfirmationActivity.class);
+//            startActivity(intent);
+//        });
         readData();
 
     }
 
     private void readData(){
         if(helper == null){
-            helper = new TestOpenHelper(getApplicationContext());
+            helper = new PostDatabaseHelper(getApplicationContext());
         }
 
         if(db == null){
@@ -50,7 +43,7 @@ public class DBConfirmationActivity extends AppCompatActivity {
         Log.d("debug","**********Cursor");
 
         Cursor cursor = db.query(
-                "testdb",
+                "postdb",
                 new String[] { "company", "stockprice" },
                 null,
                 null,
@@ -75,7 +68,6 @@ public class DBConfirmationActivity extends AppCompatActivity {
         cursor.close();
 
         Log.d("debug","**********"+sbuilder);
-        userInfoText.setText(sbuilder.toString());
+//        postInfo.setText(sbuilder.toString());
     }
-
 }
