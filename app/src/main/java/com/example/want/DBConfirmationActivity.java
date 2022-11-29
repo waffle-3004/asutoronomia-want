@@ -7,9 +7,15 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class DBConfirmationActivity extends AppCompatActivity {
 
@@ -29,6 +35,7 @@ public class DBConfirmationActivity extends AppCompatActivity {
         userInfo = findViewById(R.id.userInfo);
         btnDelete = findViewById(R.id.btnDelete);
 
+        //データ削除
         btnDelete.setOnClickListener(v -> {
             db.delete("testdb", null, null);
 
@@ -37,8 +44,27 @@ public class DBConfirmationActivity extends AppCompatActivity {
         });
         readData();
 
-    }
+        List<Map<String,String>> signUpList = new ArrayList<>();
+        int i = 0;
+        while(i < 10) {
+            Intent intent = getIntent();
+            String userId = intent.getStringExtra("userId");
+            String password = intent.getStringExtra("password");
+            Map<String,String> List = new HashMap<>();
+            List.put("userId",userId);
+            List.put("password",password);
+            signUpList.add(List);
+            i++;
+        }
 
+        String[] from = {"userId","password"};
+        int[] to = {android.R.id.text1,android.R.id.text2};
+        SimpleAdapter adapter = new SimpleAdapter(DBConfirmationActivity.this,signUpList, android.R.layout.simple_list_item_2,from,to);
+
+        userInfo.setAdapter(adapter);
+
+    }
+    //データを画面に表示
     private void readData(){
         if(helper == null){
             helper = new TestOpenHelper(getApplicationContext());

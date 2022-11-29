@@ -74,6 +74,7 @@
         android:ems="10"
         android:inputType="textPassword"
         android:hint="パスワード"
+        android:maxLength="14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edUserName" />
@@ -86,6 +87,7 @@
         android:ems="10"
         android:inputType="textPassword"
         android:hint="パスワード再確認"
+        android:maxLength="14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edPassword" />

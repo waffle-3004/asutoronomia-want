@@ -1,17 +1,14 @@
 package com.example.want;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.ContentValues;
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SignUpActivity extends AppCompatActivity {
 
@@ -41,14 +38,16 @@ public class SignUpActivity extends AppCompatActivity {
                 db = helper.getWritableDatabase();
             }
 
-            String userName = edUserName.getText().toString();
+            String userId = edUserName.getText().toString();
             String password = edPassword.getText().toString();
 
             //データの挿入
-            insertData(db, userName, password);
+            insertData(db, userId, password);
 
 
-            Intent intent = new Intent(getApplication(), DBConfirmationActivity.class);
+            Intent intent = new Intent(SignUpActivity.this, DBConfirmationActivity.class);
+            intent.putExtra("userId", userId);
+            intent.putExtra("password", password);
             startActivity(intent);
 
         });
@@ -60,10 +59,10 @@ public class SignUpActivity extends AppCompatActivity {
 
     }
 
-    private void insertData(SQLiteDatabase db, String userName, String password) {
+    private void insertData(SQLiteDatabase db, String userId, String password) {
         ContentValues values = new ContentValues();
-        values.put("company", userName);
-        values.put("stockprice", password);
+        values.put("userId", userId);
+        values.put("password", password);
 
         db.insert("testdb", null, values);
     }
